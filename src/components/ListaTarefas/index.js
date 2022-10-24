@@ -6,37 +6,25 @@ import {
   Tarefa,
   TaskInput,
   AddTaskButton,
-  RemoveButton
+  RemoveButton,
 } from "./styled";
-import bin from '../../assets/bin.png'
-
+import bin from "../../assets/bin.png";
 
 export function ListaTarefas() {
   const [lista, setLista] = useState(["Fazer exercícios", "Estudar React"]);
   const [novaTarefa, setNovaTarefa] = useState("");
 
   const renderizaLista = lista.map(() => {
-    return (
-      <Tarefa>
-        <p></p>
-        <RemoveButton>
-            <img src={bin} alt="" width="16px" />
-        </RemoveButton>
-      </Tarefa>
-    );
+
   });
 
   const onChangeTarefa = (event) => {
     setNovaTarefa(event.target.value);
   };
 
-  const adicionaTarefa = () => {
-   
-  };
+  const adicionaTarefa = () => {};
 
-  const removeTarefa = () => {
-   
-  };
+  const removeTarefa = () => {};
 
   return (
     <ListaTarefasContainer>
@@ -50,7 +38,14 @@ export function ListaTarefas() {
       </InputContainer>
 
       <ListaContainer>
-        <ul></ul>
+        <ul>
+          <Tarefa>
+            <p>Nova tarefa</p>
+            <RemoveButton>
+              <img src={bin} alt="" width="16px" />
+            </RemoveButton>
+          </Tarefa>
+        </ul>
       </ListaContainer>
     </ListaTarefasContainer>
   );
