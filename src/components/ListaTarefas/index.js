@@ -11,12 +11,8 @@ import {
 import bin from "../../assets/bin.png";
 
 export function ListaTarefas() {
-  const [lista, setLista] = useState(["Fazer exercícios", "Estudar React"]);
   const [novaTarefa, setNovaTarefa] = useState("");
 
-  const renderizaLista = lista.map(() => {
-
-  });
 
   const onChangeTarefa = (event) => {
     setNovaTarefa(event.target.value);
