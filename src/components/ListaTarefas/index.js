@@ -28,7 +28,7 @@ export function ListaTarefas() {
         <TaskInput
           placeholder="Digite aqui uma tarefa"
           value={novaTarefa}
-          onChangeTarefa={onChangeTarefa}
+          onChange={onChangeTarefa}
         />
         <AddTaskButton>Adicionar</AddTaskButton>
       </InputContainer>
